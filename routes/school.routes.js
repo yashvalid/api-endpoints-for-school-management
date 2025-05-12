@@ -4,7 +4,7 @@ const schoolController = require('../controllers/school.controller');
 
 const router = express.Router();
 
-router.post('/add', 
+router.post('/addSchool', 
     body('name').notEmpty().withMessage('Name is required'),
     body('address').notEmpty().withMessage('Address is required'),
     body('latitude').isFloat().withMessage('Latitude must be a float'),
